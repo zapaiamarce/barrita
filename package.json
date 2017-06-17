@@ -19,9 +19,7 @@
     "dev": "node server",
     "build": "next build",
     "postinstall": "npm run build",
-    "start": "NODE_ENV=production node server"
-  },
-  "devDependencies": {
+    "start": "NODE_ENV=production node server",
     "sw-precache-webpack-plugin": "^0.11.3"
   }
 }
