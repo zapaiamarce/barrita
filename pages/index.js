@@ -6,6 +6,7 @@ import Fork from '../components/Fork';
 import Todo from '../components/Todo';
 
 import initStore from '../utils/store';
+import Link from 'next/link'
 
 class Index extends React.Component {
 	static async getInitialProps({ store }) {
@@ -22,10 +23,9 @@ class Index extends React.Component {
 		const { stars } = this.props;
 		return (
 			<div>
-				<Fork stars={stars} />
-				<div>
-					<Todo />
-				</div>
+				Hola soy la home
+
+        <Link href='/comidas'><a>comidas</a></Link>
 			</div>
 		);
 	}
