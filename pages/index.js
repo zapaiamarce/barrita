@@ -23,7 +23,7 @@ class Index extends React.Component {
 		const { stars } = this.props;
 		return (
 			<div>
-				Hola soy la home
+				Hola soy la home. con cambio.
 
         <Link href='/comidas'><a>comidas</a></Link>
 			</div>
