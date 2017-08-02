@@ -1,6 +1,7 @@
 {
   "name": "barrita",
   "scripts": {
+    "postdeploy": "npm run build"
   },
   "env": {
   },
