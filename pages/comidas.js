@@ -15,8 +15,9 @@ class Comidas extends React.Component {
 
 		return (
 			<MainLayout>
-        <Header>asdas</Header>
+        <Header>test pepepe</Header>
 				Hola soy la comidas
+        <Header>test pepepe</Header>
 			</MainLayout>
 		);
 	}

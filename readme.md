@@ -1,3 +1,3 @@
-### Cualquier cosita mirar acá
+Cualquier cosita mirar acá
 
 https://github.com/zeit/next.js/
