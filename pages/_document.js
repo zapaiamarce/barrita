@@ -18,9 +18,9 @@ export default class MyDocument extends Document {
 					/>
 					<meta name="theme-color" content="#673ab7" />
 					<link rel="manifest" href="static/manifest.json" />
-          <link rel="stylesheet" href="static/dev.css"/>
+          <link rel="stylesheet" href="static/base.css"/>
           {styleTags}
-					<title>Todo App</title>
+					<title>Rico y Casero</title>
 				</Head>
 				<body>
           {main}
