@@ -11,8 +11,7 @@ const PORT = process.env.PORT || 7788;
 
 app.prepare().then(_ => {
 	const server = express();
-  // TODO Hacer que se grabe la cookie y vuelva a hacer la llamada a la URL
-  // Quizas un redirect en el cliente sin el token
+  // guarda el token en una cookie
   server.use((req,res,next)=>{
     if(req.query.token){
       var cookies = cookie.parse(req.headers.cookie || '');
