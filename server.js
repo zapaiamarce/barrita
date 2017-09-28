@@ -22,7 +22,7 @@ app.prepare().then(_ => {
           <meta http-equiv="X-UA-Compatible" content="ie=edge">
           <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min.js"></script>
           <script>
-            Cookies.set('token', '${req.query.token}');
+            Cookies.set('token', '${req.query.token}', { expires: 7 });
             setTimeout(function(){
               location.href = location.href.replace(location.search,'');
             },300);
