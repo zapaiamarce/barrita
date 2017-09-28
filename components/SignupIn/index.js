@@ -1,3 +1,6 @@
+import Button from '../Button';
+import InputText from '../InputText';
+
 const handleSubmit = next => e => {
   e.preventDefault();
   next(e.target.email.value);
@@ -6,11 +9,10 @@ const handleSubmit = next => e => {
 export default ({submit}) => (
   <form onSubmit={handleSubmit(submit)}>
     <label>
-      <h4>Ingresá tu email:</h4>
-      <input type="email" name="email"/>
+      <InputText type="email" name="email" label="Ingresá tu email:"/>
     </label>
     <div>
-      <button>Ingresar/Registrarse</button>
+      <Button>Ingresar/Registrarse</Button>
     </div>
   </form>
 )

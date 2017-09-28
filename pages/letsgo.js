@@ -1,7 +1,9 @@
-import SignupIn from  '../components/SignupIn/withData';
+import SignupInWithData from  '../components/SignupIn/withData';
+import MainLayout from '../components/MainLayout';
 import withData from '../lib/withData';
 
-
 export default withData((props) => (
-  <SignupIn></SignupIn>
+  <MainLayout>
+    <SignupInWithData></SignupInWithData>
+  </MainLayout>
 ));

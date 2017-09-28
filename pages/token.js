@@ -18,10 +18,10 @@ class Page extends Component{
     super(props)
   }
   componentDidMount(){
-    const {url:{query:{token}}} = this.props;
-    if(token){
-      location.assign(location.pathname);
-    }
+    // const {url:{query:{token}}} = this.props;
+    // if(token){
+    //   location.assign(location.pathname);
+    // }
   }
   render(){
     return <TokenWithData></TokenWithData>

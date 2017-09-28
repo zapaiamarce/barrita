@@ -20,7 +20,11 @@ app.prepare().then(_ => {
         httpOnly: true,
         maxAge: 60 * 60 * 24 * 7 // 1 week
       }));
-      next();
+      res.send(`
+        <html>
+          <script>location.href = location.href.replace(location.search,'')</script>
+        </html>
+      `)
     }else{
       next();
     }
