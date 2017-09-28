@@ -5,7 +5,6 @@ const next = require('next');
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dir: '.', dev });
 const handle = app.getRequestHandler();
-const cookie = require('cookie');
 
 const PORT = process.env.PORT || 7788;
 
@@ -14,15 +13,26 @@ app.prepare().then(_ => {
   // guarda el token en una cookie
   server.use((req,res,next)=>{
     if(req.query.token){
-      var cookies = cookie.parse(req.headers.cookie || '');
-
-      res.setHeader('Set-Cookie', cookie.serialize('token', String(req.query.token), {
-        httpOnly: true,
-        maxAge: 60 * 60 * 24 * 7 // 1 week
-      }));
       res.send(`
-        <html>
-          <script>location.href = location.href.replace(location.search,'')</script>
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <meta http-equiv="X-UA-Compatible" content="ie=edge">
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min.js"></script>
+          <script>
+            Cookies.set('token', '${req.query.token}');
+            setTimeout(function(){
+              location.href = location.href.replace(location.search,'');
+            },300);
+          </script>
+        </head>
+        <body>
+          <h1>
+            ... inform the googles
+          </h1>
+        </body>
         </html>
       `)
     }else{

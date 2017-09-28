@@ -15,8 +15,11 @@ export default class MyDocument extends Document {
 						name="viewport"
 						content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,minimal-ui"
 					/>
-					<meta name="theme-color" content="#673ab7" />
-					<link rel="manifest" href="static/manifest.json" />
+          <meta name="theme-color" content="#673ab7" />
+          <link rel="manifest" href="static/manifest.json" />
+
+          <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+          <script src="static/load-fonts.js"></script>
           <link rel="stylesheet" href="static/base.css"/>
           {styleTags}
 					<title>Rico y Casero</title>

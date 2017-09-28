@@ -1,8 +1,15 @@
+@import '/static/fonts/KometPro/stylesheet.css';
+
 *{
   box-sizing: border-box;
 }
 
 body{
+  font-family: 'Helvetica', 'Arial';
   font-size: 16px;
   margin:0;
+}
+
+html.wf-active body{
+  font-family: 'KometPro-Regular'
 }
