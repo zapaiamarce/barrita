@@ -6,9 +6,11 @@ import MainLayout from '../components/MainLayout';
 const Token = (props) => <div>{JSON.stringify(props)}</div>
 
 const TokenWithData = graphql(gql`
-  {
-    User(email:"qzapaia@gmail.com"){
-      id
+  query {
+    user{
+      fullname,
+      id,
+      email
     }
   }
 `)(Token);
@@ -18,13 +20,3 @@ export default withData((props) => (
     <TokenWithData></TokenWithData>
   </MainLayout>
 ));
-// class Page extends Component{
-//   constructor(props){
-//     super(props)
-//   }
-//   render(){
-//     return <TokenWithData></TokenWithData>
-//   }
-// };
-//
-// export default withData(Page)
