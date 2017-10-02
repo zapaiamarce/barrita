@@ -1,7 +1,6 @@
 import {Component} from 'react';
-import withData from '../lib/withData';
 import { gql, graphql } from 'react-apollo';
-import MainLayout from '../components/MainLayout';
+import MainLayout from '../components/MainLayout/withData';
 
 const Token = (props) => <div>{JSON.stringify(props)}</div>
 
@@ -15,8 +14,8 @@ const TokenWithData = graphql(gql`
   }
 `)(Token);
 
-export default withData((props) => (
+export default (props) => (
   <MainLayout>
     <TokenWithData></TokenWithData>
   </MainLayout>
-));
+);

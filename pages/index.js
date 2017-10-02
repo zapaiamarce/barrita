@@ -1,8 +1,7 @@
-import MainLayout from '../components/MainLayout';
-import withData from '../lib/withData';
+import MainLayout from '../components/MainLayout/withData';
 
-export default withData((props) => (
+export default () => (
   <MainLayout>
     <div>Soy la home 321</div>
   </MainLayout>
-));
+);
